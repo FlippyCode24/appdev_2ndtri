@@ -34,12 +34,13 @@ def multiply(request, a: int | float, b: int | float) -> dict:
 
 @api.get('/divide')
 def divide(request, a: int | float, b: int | float) -> dict:
-    return {'result': a / b} if b != 0 else {'Error' : 'Divide by zero Error.'}
+    return {'result': a / b} if b != 0 else {'Result' : 'Error: Zero Division Error.'}
 
-@api.get('/yveshouse')
+@api.get('/IDdaw')
 def yveshouse(request) -> dict:
-    return {'name': 'Evelyn',
-            'age' : 80}
+    return {'name': 'Miguel Angel Bautista',
+            'USN' : '18003092300',
+            'Program': 'Computer Science'}
 
 urlpatterns = [
     path('admin/', admin.site.urls),
